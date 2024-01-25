@@ -7,7 +7,7 @@ As instruções são para Ubuntu Server, mas devem funcionar com outras distros.
 
 ```
 
-Passo 1 - Instaland oo JDK8
+Passo 1 - Instalando o JDK8
 
 Abra o link: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
