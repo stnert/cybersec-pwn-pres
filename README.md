@@ -1,13 +1,14 @@
-# cybersec-pwn-pres - Uma exploração para Apache Struts CVE-2017-5638
+# cybersec-pwn-pres - Uma exploração para Apache Struts - CVE-2017-5638
 
 Seguimos estas etapas para configurar uma instância vulnerável do Struts 2 para testes - CVE-2017-5638
 
 As instruções são para Ubuntu Server, mas devem funcionar com outras distros. 
 
 
-```
 
-Passo 1 - Instalando o JDK8
+# Passo 1 - Instalando o JDK8
+
+```
 
 Abra o link: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 
@@ -44,8 +45,11 @@ sudo update-alternatives --config javaws
 If you see "nothing to configure" that's OK.
 java -version
 
-Passo 2 - Instalando o TomCat
+```
 
+# Passo 2 - Instalando o TomCat
+
+```
 Download...
 https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M26/bin/apache-tomcat-9.0.0.M26.tar.gz
 
@@ -83,20 +87,24 @@ http://System_IP:8080/
 
 You see an Apache Tomcat page.
 
-Passo 3 - Instaland oo Unzip
+```
 
+# Passo 3 - Instaland oo Unzip
+```
 sudo apt update
 sudo apt install unzip
+```
 
-Passo 4 -  Instale Struts2 (Old, Vulnerable Version)
-
+# Passo 4 -  Instale Struts2 (Old, Vulnerable Version)
+```
 cd
 wget http://archive.apache.org/dist/struts/2.5.10/struts-2.5.10-all.zip
 unzip struts-2.5.10-all.zip
 mv struts-2.5.10 struts2
+```
 
-Passo 5 - Instalando o Maven
-
+# Passo 5 - Instalando o Maven
+```
 cd /tmp
 wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.5.0/apache-maven-3.5.0-bin.tar.gz
 sudo tar xvzf apache-maven*.tar.gz -C /opt/
@@ -109,9 +117,12 @@ Ubuntu server, execute this command to set the new environment variable:
 source .bashrc
 In the SSH session controlling your Ubuntu server, execute this command:
 mvn -version
-You see a version number
-Step5: Creating a Project
-Ubuntu server, execute these commands:
+Verique a versão
+```
+
+# Passo 6: Criando o projeto 
+Ubuntu server, execute esses comandos:
+```
 cd
 mvn archetype:generate \
 -DgroupId=com.tutorialforlinux \
@@ -122,7 +133,7 @@ When you see the message: "Define value for property 'version' 1.0-SNAPSHOT: :",
 When you see the message: "Y: :", press Enter.
 You see a "BUILD SUCCESS" message
 
-Ubuntu server, execute these commands:
+Ubuntu server, execute esses comando:
 cd myWebApp
 nano pom.xml
 The file opens, as shown below. This is an XML configuration file.
@@ -145,16 +156,17 @@ Many pages of "Downloading" messages scroll by, ending with a green "BUILD SUCCE
 This has created a "war" file, ready to deploy, at this location:
 ~/myWebApp/target/basic_struts.war
 However, we don't actually need that application. We'll deploy a different one later.
+```
 
-Passo 6 - Configurando o Web-Based Deployment
-
+# Passo 6 - Configurando o Web-Based Deployment
+```
 cd
 nano .bashrc
 Add this line to the bottom of the file, as shown below.
 export CATALINA_HOME=/usr/local/tomcat
 
 Save the file with Ctrl+X, Y, Enter.
-Ubuntu server, execute this command to set the new environment variable:
+
 source .bashrc
 Now we need to adjust the tomcat configuration to allow administration from remote addresses.
 Ubuntu server, execute this command:
@@ -165,7 +177,8 @@ Insert these lines into the "tomcat-users" section,
 <user username="admin" password="admin" roles="manager-gui"/>
 
 Save the file with Ctrl+X, Y, Enter.
-Ubuntu server, execute this command:
+Ubuntu server, execute esses comandos:
+
 sudo nano $CATALINA_HOME/conf/Catalina/localhost/manager.xml
 
 Insert these lines into the file, as shown below.
@@ -179,35 +192,37 @@ Ubuntu server, execute these commands to restart Tomcat. It may take a few minut
 sudo $CATALINA_HOME/bin/shutdown.sh
 sudo $CATALINA_HOME/bin/startup.sh
 Tomcat restarts,
+```
 
-Passo 7 - Abra a página de Administração Web 
-
+# Passo 7 - Abra a página de Administração Web 
+```
 http://IP:8080/manager
 A box pops up asking for credentials. Enter these credentials:
 Username: admin
 Password: admin
 
 In the "Tomcat Web Application Manager" page, scroll down to the "Deploy" section
+```
 
-Passo 8 - Baixando o Web App Vulnerável 
-
-On your host system, in a Web browser, go to:
+# Passo 8 - Baixando o Web App Vulnerável 
+```
+No seu sistema, abra o navegador Web em:
 https://github.com/nixawk/labs/blob/master/CVE-2017-5638/struts2_2.3.15.1-showcase.war
-On the right side, click the Download button.
-You get a file named struts2_2.3.15.1-showcase.war
+No lado direito,clique no botão de Download 
+Você verá um arquivo chamado: struts2_2.3.15.1-showcase.war
+```
 
-Passo 9: Fazendo o Deploying the Vulnerable Web App
-In the "Tomcat Web Application Manager" page, in the "Deploy" section, in the "WAR file to deploy" section, click the "Choose File" button.
+# Passo 9: Fazendo o Deploying the Vulnerable Web App
+```
+Na página "Tomcat Web Application Manager", na sessão "Deploy", na seção "WAR file to deploy", clique no botão "Choose File".
 
-Navigate to your Downloads folder and double-click the struts2_2.3.15.1-showcase.war file.
+Navegue até a pasta Downloads e clique duas vezes no arquivo struts2_2.3.15.1-showcase.war.
 
-Click the Deploy button.
+Selecione para fazer o Deploy. 
 
-The Tomcat page now shows the /struts2_2.3.15.1-showcase application at the bottom of the Applications section, as shown below
-Click /struts2_2.3.15.1-showcase.
-The "Struts2 Showcase" page should appear.
-
-referenced this blog with some tweaks..
+A página do Tomcat agora mostra o aplicativo /struts2_2.3.15.1-showcase na parte inferior da seção Aplicativos, conforme mostrado abaixo
+Clique em /struts2_2.3.15.1-showcase.
+A página "Struts2 Showcase" deve aparecer.
 
 http://blog.ud64.com/2017/09/apache-struts-with-cve-2017-5638-set-up.html
 
