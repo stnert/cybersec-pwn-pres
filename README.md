@@ -225,5 +225,3 @@ Clique em /struts2_2.3.15.1-showcase.
 A página "Struts2 Showcase" deve aparecer.
 
 http://blog.ud64.com/2017/09/apache-struts-with-cve-2017-5638-set-up.html
-
-
