@@ -4,24 +4,6 @@ Seguimos estas etapas para configurar uma instância vulnerável do Struts 2 par
 
 As instruções são para Ubuntu Server, mas devem funcionar com outras distros. 
 
-Passo 1 - Instale o Oracle Java JDK 8 
-
-Passo 2 - Instale o Tomcat
-
-Passo 3 - Instale o unzip
-
-Passo 4 - Instale Struts2 (Old, Vulnerable Version)
-
-Passo 5 - Instale o Maven
-
-Passo 6 - Configure um Web-Based Deployment
-
-Passo 7 - Abra a página de Administração Web 
-
-Passo 8 - Baixe o Downloading o Web App Vulnerável 
-
-Passo 9 - Faça o Deploying do Vulnerable Web App
-
 
 ```
 Download jdk-8u171-linux-x64.tar.gz copy to /tmp
