@@ -249,7 +249,7 @@ http://blog.ud64.com/2017/09/apache-struts-with-cve-2017-5638-set-up.html
 # Verificando a Vulnerabilidade
 Para checar se há a vulnerabilidade, é só executar o comando:
 ```
-python3 struts-pwn.py --check --url 'http://192.168.0.17:8080/strutc2_2_3.15.1-showcase.action'
+python3 struts-pwn.py --check --url 'http://192.168.0.17:8080/struts2_2_3.15.1-showcase.action'
 ```
 O script vai então montar o payload com uma string aleatória e verificar se está igual ao retornado na resposta para constatar a vulnerabilidade:
 
