@@ -141,7 +141,7 @@ At the bottom of the file, in the "build" section, change myWebApp to basic_stru
 <finalName>basic_struts</finalName>
 </build>
 
-Na parte inferior do arquivo, na seção "dependências", adicione uma nova seção "dependência", Incluir na seção <dependências>�:
+Na parte inferior do arquivo, na seção "dependências", adicione uma nova sessão "dependência", Incluir na sessão <dependências>:
 
 <dependency>
 <groupId>org.apache.struts</groupId>
