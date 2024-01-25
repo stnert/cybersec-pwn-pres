@@ -242,3 +242,17 @@ Clique em /struts2_2.3.15.1-showcase.
 A página "Struts2 Showcase" deve aparecer.
 
 http://blog.ud64.com/2017/09/apache-struts-with-cve-2017-5638-set-up.html
+```
+![Imagem do WhatsApp de 2024-01-25 à(s) 01 01 07_bd4cb609](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/7c371654-bde2-4ec1-a384-524c29f7bd24)
+<div align="center"> Painel de Administração para o Deploy </div>
+
+# Verificando a Vulnerabilidade
+Para checar se há a vulnerabilidade, é só executar o comando:
+```
+python3 struts-pwn.py --check --url 'http://192.168.0.17:8080/strutc2_2_3.15.1-showcase.action'
+```
+O script vai então montar o payload com uma string aleatória e verificar se está igual ao retornado na resposta para constatar a vulnerabilidade:
+
+![Imagem do WhatsApp de 2024-01-25 à(s) 01 01 26_9dc3e774](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/45335df1-926d-41ce-9d0a-42422fdefd9a)
+<div align="center"> Vulnerabilidade Costatada </div>
+
