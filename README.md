@@ -68,9 +68,9 @@ Adicione esta linha ao final do arquivo, conforme mostrado abaixo.
 
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_171
 
-Save the file with :wq, Enter.
+Salve o arquivo com :wq, Enter.
 
-Ubuntu server, execute this command to set the new environment variable:
+Servidor Ubuntu, execute este comando para definir a nova variável de ambiente:
 
 source .bashrc
 
