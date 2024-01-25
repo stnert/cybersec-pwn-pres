@@ -220,7 +220,7 @@ No lado direito,clique no botão de Download
 Você verá um arquivo chamado: struts2_2.3.15.1-showcase.war
 ```
 
-# Fazendo o Deploying the Vulnerable Web App
+# Fazendo o Deploying do Web App
 ```
 Na página "Tomcat Web Application Manager", na sessão "Deploy", na sessão "WAR file to deploy", clique no botão "Choose File".
 
