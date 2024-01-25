@@ -22,6 +22,8 @@ Passo 7 - Abra a página de Administração Web
 
 Passo 8 - Baixe o Downloading o Web App Vulnerável 
 
+Passo 9 - Faça o Deploying do Vulnerable Web App
+
 
 ```
 Download jdk-8u171-linux-x64.tar.gz copy to /tmp
@@ -209,7 +211,7 @@ https://github.com/nixawk/labs/blob/master/CVE-2017-5638/struts2_2.3.15.1-showca
 On the right side, click the Download button.
 You get a file named struts2_2.3.15.1-showcase.war
 
-Step9: Deploying the Vulnerable Web App
+Passo 9: Fazendo o Deploying the Vulnerable Web App
 In the "Tomcat Web Application Manager" page, in the "Deploy" section, in the "WAR file to deploy" section, click the "Choose File" button.
 
 Navigate to your Downloads folder and double-click the struts2_2.3.15.1-showcase.war file.
