@@ -228,6 +228,8 @@ https://github.com/nixawk/labs/blob/master/CVE-2017-5638/struts2_2.3.15.1-showca
 No lado direito,clique no botão de Download 
 Você verá um arquivo chamado: struts2_2.3.15.1-showcase.war
 ```
+![Imagem do WhatsApp de 2024-01-25 à(s) 01 00 47_3963e635](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/0fd399a8-8401-4c09-adf8-0bc35a897c0a)
+<div align="center"> Aplicação WEB Vulnerável </div>
 
 # Fazendo o Deploying do Web App
 ```
