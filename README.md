@@ -254,5 +254,5 @@ python3 struts-pwn.py --check --url 'http://192.168.0.17:8080/struts2_2_3.15.1-s
 O script vai então montar o payload com uma string aleatória e verificar se está igual ao retornado na resposta para constatar a vulnerabilidade:
 
 ![Imagem do WhatsApp de 2024-01-25 à(s) 01 01 26_9dc3e774](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/45335df1-926d-41ce-9d0a-42422fdefd9a)
-<div align="center"> Vulnerabilidade Costatada </div>
+<div align="center"> Vulnerabilidade Constatada </div>
 
