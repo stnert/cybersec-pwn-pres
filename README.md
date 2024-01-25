@@ -156,9 +156,9 @@ Na parte inferior do arquivo, na seção "dependências", adicione uma nova sess
 <artifactId>struts2-core</artifactId>
 <version>2.5.10</version>
 </dependency>
-Save the file with Ctrl+X, Y, Enter.
+Salve o arquivo (Ctrl+X) + Y + Enter.
 
-To make your web app,Ubuntu server, execute this command:
+Para tornar seu aplicativo web um servidor Ubuntu, execute este comando:
 mvn clean package
 Many pages of "Downloading" messages scroll by, ending with a green "BUILD SUCCESS" message
 This has created a "war" file, ready to deploy, at this location:
@@ -195,7 +195,9 @@ Insira essas linhas no arquivo, conforme mostrado abaixo.
 docBase="${catalina.home}/webapps/manager">
 <Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" />
 </Context>
-Save the file with Ctrl+X, Y, Enter.
+
+Salve o arquivo (Ctrl+X) + Y + Enter.
+
 Ubuntu server, execute these commands to restart Tomcat. It may take a few minutes to shut down the first time--that's OK.
 sudo $CATALINA_HOME/bin/shutdown.sh
 sudo $CATALINA_HOME/bin/startup.sh
@@ -205,7 +207,8 @@ Tomcat restarts,
 # Passo 8 - Abra a página de Administração Web 
 ```
 http://IP:8080/manager
-A box pops up asking for credentials. Enter these credentials:
+
+Uma caixa aparece solicitando credenciais. Insira estas credenciais:
 Username: admin
 Password: admin
 
