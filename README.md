@@ -6,6 +6,9 @@ As instruções são para Ubuntu Server, mas devem funcionar com outras distros.
 
 
 ```
+
+Passo 1 - Instaland oo JDK8
+
 Download jdk-8u171-linux-x64.tar.gz copy to /tmp
 
 cd /tmp
