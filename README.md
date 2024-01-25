@@ -6,7 +6,7 @@ Seguimos estas etapas para configurar uma instância vulnerável do Struts 2 par
 
 As instruções são para Ubuntu Server, mas devem funcionar com outras distros. 
 
-# Passo 1 - Instale o Oracle Java JDK 8 
+Passo 1 - Instale o Oracle Java JDK 8 
 
 ```
 Download jdk-8u171-linux-x64.tar.gz copy to /tmp
