@@ -105,16 +105,24 @@ mv struts-2.5.10 struts2
 # Passo 5 - Instalando o Maven
 ```
 cd /tmp
+
 wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.5.0/apache-maven-3.5.0-bin.tar.gz
+
 sudo tar xvzf apache-maven*.tar.gz -C /opt/
 cd
+
 nano .bashrc
-Add this line to the bottom of the file, as shown below.
+
+Adicione esta linha ao final do arquivo, conforme mostrado abaixo.
+
 export PATH=$PATH:/opt/apache-maven-3.5.0/bin
-Save the file with Ctrl+X, Y, Enter.
-Ubuntu server, execute this command to set the new environment variable:
+
+Salve o arquivo (Ctrl+X) + Y + Enter.
+
+Servidor Ubuntu, execute este comando para definir a nova variável de ambiente:
 source .bashrc
-In the SSH session controlling your Ubuntu server, execute this command:
+
+Servidor Ubuntu, execute este comando para definir a nova variável de ambiente:
 mvn -version
 Verique a versão
 ```
@@ -158,7 +166,7 @@ This has created a "war" file, ready to deploy, at this location:
 However, we don't actually need that application. We'll deploy a different one later.
 ```
 
-# Passo 6 - Configurando o Web-Based Deployment
+# Passo 7 - Configurando o Web-Based Deployment
 ```
 cd
 nano .bashrc
@@ -194,7 +202,7 @@ sudo $CATALINA_HOME/bin/startup.sh
 Tomcat restarts,
 ```
 
-# Passo 7 - Abra a página de Administração Web 
+# Passo 8 - Abra a página de Administração Web 
 ```
 http://IP:8080/manager
 A box pops up asking for credentials. Enter these credentials:
@@ -204,7 +212,7 @@ Password: admin
 Na página "Tomcat Web Application Manager", role para baixo até a seção "Implantar"
 ```
 
-# Passo 8 - Baixando o Web App Vulnerável 
+# Passo 9 - Baixando o Web App Vulnerável 
 ```
 No seu sistema, abra o navegador Web em:
 https://github.com/nixawk/labs/blob/master/CVE-2017-5638/struts2_2.3.15.1-showcase.war
@@ -212,7 +220,7 @@ No lado direito,clique no botão de Download
 Você verá um arquivo chamado: struts2_2.3.15.1-showcase.war
 ```
 
-# Passo 9: Fazendo o Deploying the Vulnerable Web App
+# Fazendo o Deploying the Vulnerable Web App
 ```
 Na página "Tomcat Web Application Manager", na sessão "Deploy", na sessão "WAR file to deploy", clique no botão "Choose File".
 
