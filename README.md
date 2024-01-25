@@ -162,7 +162,7 @@ However, we don't actually need that application. We'll deploy a different one l
 ```
 cd
 nano .bashrc
-Add this line to the bottom of the file, as shown below.
+Adicione esta linha ao final do arquivo, conforme mostrado abaixo.
 export CATALINA_HOME=/usr/local/tomcat
 
 Save the file with Ctrl+X, Y, Enter.
@@ -176,12 +176,12 @@ Insert these lines into the "tomcat-users" section,
 <role rolename="manager-gui" />
 <user username="admin" password="admin" roles="manager-gui"/>
 
-Save the file with Ctrl+X, Y, Enter.
+Salve o arquivo com Ctrl+X, Y, Enter.
 Ubuntu server, execute esses comandos:
 
 sudo nano $CATALINA_HOME/conf/Catalina/localhost/manager.xml
 
-Insert these lines into the file, as shown below.
+Insira essas linhas no arquivo, conforme mostrado abaixo.
 
 <Context privileged="true" antiResourceLocking="false"
 docBase="${catalina.home}/webapps/manager">
