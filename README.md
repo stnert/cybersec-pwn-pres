@@ -4,7 +4,13 @@ Seguimos estas etapas para configurar uma instância vulnerável do Struts 2 par
 
 As instruções são para Ubuntu Server, mas devem funcionar com outras distros. 
 
+# O que é CVE-2017-5638?
 
+Essa é uma vulnerabilidade presente na versão 2.5.10 do Apache Struts que permite realizar injeções de comando
+por meio da análise incorreta do cabeçalho HTTP Content-Type de um invasor. Ela 
+permite que esses comandos sejam executados sob privilégios do servidor Web.<br>
+O código vulnerável está no analisador Jakarta Multipart. Se o valor Content-Type não for válido, ou seja, não corresponder a um tipo válido esperado, será lançada uma exceção que será usada para exibir uma mensagem de erro a um usuário.<br>
+A vulnerabilidade ocorre porque o Content-Type é usado pela função LocalizedTextUtil.findText para criar a mensagem de erro. Esta função interpreta a mensagem fornecida, e qualquer coisa dentro de ${…} será tratada como uma expressão Object Graph Navigation Library (OGNL). O invasor pode aproveitar essas condições para executar expressões OGNL que, por sua vez, executam comandos do sistema.
 
 # Passo 1 - Instalando o JDK8
 
@@ -127,7 +133,7 @@ mvn -version
 Verique a versão
 ```
 
-# Passo 6: Criando o projeto 
+# Passo 6 - Criando o projeto 
 Ubuntu server, execute esses comandos:
 ```
 cd
