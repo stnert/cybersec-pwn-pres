@@ -64,7 +64,7 @@ cd
 
 vi .bashrc
 
-Add this line to the bottom of the file, as shown below.
+Adicione esta linha ao final do arquivo, conforme mostrado abaixo.
 
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_171
 
