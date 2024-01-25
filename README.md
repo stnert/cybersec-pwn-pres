@@ -89,7 +89,7 @@ You see an Apache Tomcat page.
 
 ```
 
-# Passo 3 - Instaland oo Unzip
+# Passo 3 - Instalando o Unzip
 ```
 sudo apt update
 sudo apt install unzip
