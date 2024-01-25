@@ -164,11 +164,11 @@ nano .bashrc
 Adicione esta linha ao final do arquivo, conforme mostrado abaixo.
 export CATALINA_HOME=/usr/local/tomcat
 
-Save the file with Ctrl+X, Y, Enter.
+Salve o arquivo (Ctrl+X) + Y + Enter.
 
 source .bashrc
-Now we need to adjust the tomcat configuration to allow administration from remote addresses.
-Ubuntu server, execute this command:
+Agora precisamos ajustar a configuração do Tomcat para permitir a administração de endereço remoto.
+
 sudo nano $CATALINA_HOME/conf/tomcat-users.xml
 The "tomcat-users" section contain only comments,
 Insert these lines into the "tomcat-users" section,
@@ -200,7 +200,7 @@ A box pops up asking for credentials. Enter these credentials:
 Username: admin
 Password: admin
 
-In the "Tomcat Web Application Manager" page, scroll down to the "Deploy" section
+Na página "Tomcat Web Application Manager", role para baixo até a seção "Implantar"
 ```
 
 # Passo 8 - Baixando o Web App Vulnerável 
