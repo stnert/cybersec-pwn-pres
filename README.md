@@ -42,10 +42,7 @@ sudo update-alternatives --config javaws
 If you see "nothing to configure" that's OK.
 java -version
 
-´´´
-# Passo 2 - Instale o Tomcat
-
-´´´
+Passo 2 - Instale o Tomcat
 Download...
 https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.0.M26/bin/apache-tomcat-9.0.0.M26.tar.gz
 tar xvzf apache-tomcat-9.0.0.M26.tar.gz
@@ -65,5 +62,7 @@ Tomcat starts
 On your host system, in a Web browser, open this URL, replacing the IP.
 http://System_IP:8080/
 You see an Apache Tomcat page.
+´´´
+
 
 
