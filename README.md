@@ -44,7 +44,6 @@ sudo update-alternatives --config javaws
 
 If you see "nothing to configure" that's OK.
 java -version
-
 ```
 
 # Passo 2 - Instalando o TomCat
