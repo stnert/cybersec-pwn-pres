@@ -276,7 +276,7 @@ Utilizando o script, é possível passar os comandos shell para serem explorados
 <br>
 
 ![Imagem do WhatsApp de 2024-01-25 à(s) 21 25 56_7f1f73ea](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/fbf5bbd2-80c4-4eec-a81e-90e22df2ac0b)
-![Imagem do WhatsApp de 2024-01-25 à(s) 21 25 56_2dd94e4b](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/bcaeee5d-f6d0-4750-9675-87d75d487058)
+![Imagem do WhatsApp de 2024-01-25 à(s) 21 26 06_07cd7c7b](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/59b7033f-1a2d-4418-8b41-24e68df88b9b)
 <div align="center"> Execução do comando mkdir teste2 </div>
 
 
