@@ -248,13 +248,29 @@ http://blog.ud64.com/2017/09/apache-struts-with-cve-2017-5638-set-up.html
 ![Imagem do WhatsApp de 2024-01-25 à(s) 01 01 07_bd4cb609](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/7c371654-bde2-4ec1-a384-524c29f7bd24)
 <div align="center"> Painel de Administração para o Deploy </div>
 
-# Verificando a Vulnerabilidade
+# Constatando a Vulnerabilidade
 Para checar se há a vulnerabilidade, é só executar o comando:
 ```
 python3 struts-pwn.py --check --url 'http://192.168.0.17:8080/struts2_2.3.15.1-showcase/showcase.action'
 ```
 O script vai então montar o payload com uma string aleatória e verificar se está igual ao retornado na resposta para constatar a vulnerabilidade:
+![Imagem do WhatsApp de 2024-01-24 à(s) 22 35 39_4b78cf13](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/5659a79c-c9f7-442a-b2a8-9dac89dc1eaa)
+<div align="center"> Sem Vulnerabilidade </div>
 
 ![Imagem do WhatsApp de 2024-01-25 à(s) 01 01 26_9dc3e774](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/45335df1-926d-41ce-9d0a-42422fdefd9a)
 <div align="center"> Vulnerabilidade Constatada </div>
+
+# Verificando a Vulnerabilidade
+Utilizando o script, é possível passar os comandos shell para serem explorados na aplicação:
+
+![Imagem do WhatsApp de 2024-01-25 à(s) 21 24 35_1e0ca66f](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/6a9631a6-f835-4b31-ae89-d797d22f5444)
+<div align="center"> Execução do comando ls </div>
+
+![Imagem do WhatsApp de 2024-01-25 à(s) 21 27 01_f14b27d0](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/a4a89a0a-8db4-46e0-9e19-8d051b0bd99b)
+<div align="center"> Execução do comando ls -la </div>
+
+![Imagem do WhatsApp de 2024-01-25 à(s) 21 25 56_7f1f73ea](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/fbf5bbd2-80c4-4eec-a81e-90e22df2ac0b)
+![Imagem do WhatsApp de 2024-01-25 à(s) 21 25 56_2dd94e4b](https://github.com/stnert/cybersec-pwn-pres/assets/100847921/bcaeee5d-f6d0-4750-9675-87d75d487058)
+<div align="center"> Execução do comando mkdir teste2 </div>
+
 
